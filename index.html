@@ -53,7 +53,7 @@
 
     // --- TEXTOS PARA LAIS ---
     const texto1 = "¡Buenos Días! 🥰";
-    const texto2 = "Que este día sea lleno de bendiciones para ti Lais<br>Eres especial 💗<br>Preciosa ✨<br>Única 🌷";
+    const texto2 = "Que este día sea lleno de bendiciones para ti Lais 💗";
     const nombre = "LAIS";
 
     function escribirTexto(texto, callback) {
@@ -81,7 +81,7 @@
                             etapa = 2;
                             mensaje.classList.add('visible');
                             escribirTexto(texto2);
-                        }, 8000);
+                        }, 12000);
                     }, 5000);
                 }, 1000);
             }, 3000);
@@ -136,14 +136,14 @@
     }
 
 
-    // --- PÁJAROS CON MENSAJES ---
-    const frases = ["Eres especial", "Preciosa", "Única"];
+    // --- 🐦 PAJARITOS CON LOS MENSAJES QUE PEDISTE ---
+    const frases = ["Eres especial 💖", "Preciosa ✨", "Única 🌟", "Te amo ❤️", "Buenos Días Lais 🥰"];
     class PajaroMensaje {
         constructor() {
             this.x = canvas.width + Math.random()*200;
             this.y = Math.random() * (canvas.height/2) + 50;
             this.vel = Math.random() * 1.5 + 1;
-            this.texto = frases[Math.floor(Math.random * frases.length)];
+            this.texto = frases[Math.floor(Math.random() * frases.length)];
         }
         update() {
             this.x -= this.vel;
@@ -161,7 +161,7 @@
     let pajarosMensajes = [];
     function agregarPajaro() {
         pajarosMensajes.push(new PajaroMensaje());
-        if(etapa === 3) setTimeout(agregarPajaro, 2000);
+        if(etapa === 3) setTimeout(agregarPajaro, 2500);
     }
 
 
